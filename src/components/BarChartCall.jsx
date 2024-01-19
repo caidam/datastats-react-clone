@@ -6,7 +6,7 @@ import BarChart from './BarChart';
 const fetchDataForBarChart = async () => {
   try {
     // Make the API call
-    const response = await fetch('http://51.44.20.166:5000/top_skills');
+    const response = await fetch('https://caidam.freeddns.org/top_skills');
     
     if (!response.ok) {
       throw new Error('Failed to fetch data for BarChart');

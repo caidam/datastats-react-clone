@@ -6,7 +6,7 @@ import LineChart from './LineChart';
 const fetchDataForLineChart = async () => {
   try {
     // Make the API call
-    const response = await fetch('http://51.44.20.166:5000/offer_evolution');
+    const response = await fetch('https://caidam.freeddns.org/offer_evolution');
     
     if (!response.ok) {
       throw new Error('Failed to fetch data for LineChart');
