@@ -6,7 +6,7 @@ import LineChart from './LineChart';
 const fetchDataForLineChart = async () => {
   try {
     // Make the API call
-    const response = await fetch('https://caidam.freeddns.org/offer_evolution');
+    const response = await fetch(`${import.meta.env.VITE_REACT_APP_BASE_URL}/offer_evolution`);
     
     if (!response.ok) {
       throw new Error('Failed to fetch data for LineChart');
@@ -19,7 +19,7 @@ const fetchDataForLineChart = async () => {
     const chartData = {
       labels: data.map((item) => item.ref_day),
       datasets: [{
-        label: 'Users Gained',
+        label: 'Number of Offers',
         data: data.map((item) => item.nb_offer),
         backgroundColor: '#36A2EB', // Set your desired background color
         tension: 0.4,

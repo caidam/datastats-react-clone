@@ -3,10 +3,11 @@ import React from 'react';
 import DataFetchingComponent from './DataFetchingComponent';
 import BarChart from './BarChart';
 
+
 const fetchDataForBarChart = async () => {
   try {
     // Make the API call
-    const response = await fetch('https://caidam.freeddns.org/top_skills');
+    const response = await fetch(`${import.meta.env.VITE_REACT_APP_BASE_URL}/top_skills`);
     
     if (!response.ok) {
       throw new Error('Failed to fetch data for BarChart');
@@ -19,7 +20,7 @@ const fetchDataForBarChart = async () => {
     const chartData = {
       labels: data.map((item) => item.technologie),
       datasets: [{
-        label: 'Users Gained',
+        label: 'Number of Offers',
         data: data.map((item) => item.nb_offer),
         backgroundColor: '#36A2EB', // Set your desired background color
         tension: 0.4,

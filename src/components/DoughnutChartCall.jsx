@@ -6,7 +6,7 @@ import DoughnutChart from './DoughnutChart';
 const fetchDataForChart = async () => {
   try {
     // Make the API call
-    const response = await fetch('https://caidam.freeddns.org/top_5_jobs');
+    const response = await fetch(`${import.meta.env.VITE_REACT_APP_BASE_URL}/top_5_jobs`);
     
     if (!response.ok) {
       throw new Error('Failed to fetch data for Chart');
