@@ -1,5 +1,6 @@
 
 import React, { useState, useEffect } from "react";
+import Navbar from "./components/NavBar";
 import BarChartCall from "./components/BarChartCall";
 import LineChartCall from "./components/LineChartCall";
 import DoughnutChartCall from "./components/DoughnutChartCall";
@@ -14,10 +15,10 @@ function App() {
 
     return (
       <>
+        <>
+          < Navbar />
+        </>
         <div className="chart-container">
-            <div>
-                <h1 style={{ textAlign: 'center' }}>Datastats</h1>
-            </div>
             {/* <div>
               <JobTitleSelector/>
             </div>
