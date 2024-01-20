@@ -7,7 +7,7 @@ const Navbar = () => {
             <div className="navbar-logo">Datastats</div>
             <div className="navbar-links">
                 <a href="#line-chart" className='active'>Home</a>
-                <a href="#bar-chart" title="Access to this page is restricted to authenticated users." >Detailed Dashboards</a>
+                <a href="#bar-chart" title="Access to this page is restricted to authenticated users." >Dashboards</a>
                 <a href="#doughnut-chart" title="Access to this page is restricted to authenticated users.">Datasets</a>
             </div>
         </div>
